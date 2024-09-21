@@ -20,7 +20,6 @@ public class FilmController {
         this.filmsService = filmsService;
     }
 
-
     @PostMapping
     public ResponseEntity<ResponseFilm> createFilm(@RequestBody RequestFilm requestFilm){
         return ResponseEntity.status(HttpStatus.CREATED).body(filmsService.createFilm(requestFilm));
