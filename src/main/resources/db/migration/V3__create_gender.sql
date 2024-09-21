@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS gender (
+    id VARCHAR(32) NOT NULL,
+    film_id VARCHAR(32) NOT NULL,
+    name VARCHAR(40) NOT NULL,
+    CONSTRAINT gender_pkey PRIMARY KEY (id),
+    FOREIGN KEY (film_id) REFERENCES films(id) ON DELETE CASCADE
+);
