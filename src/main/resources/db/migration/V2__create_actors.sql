@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS actor (
-    id VARCHAR(32) NOT NULL,
-    film_id VARCHAR(32) NOT NULL,
+    id VARCHAR(36) NOT NULL,
+    film_id VARCHAR(36) NOT NULL,
     first_name VARCHAR(40) NOT NULL,
     last_name VARCHAR(40) NOT NULL,
     birthday DATE NOT NULL,
