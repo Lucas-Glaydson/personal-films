@@ -3,6 +3,7 @@ package com.filmflix.films.controller;
 import com.filmflix.films.dto.film.RequestFilm;
 import com.filmflix.films.dto.film.ResponseFilm;
 import com.filmflix.films.service.FilmsService;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class FilmController {
     }
 
     @PostMapping
-    public ResponseEntity<ResponseFilm> createFilm(@RequestBody RequestFilm requestFilm){
+    public ResponseEntity<ResponseFilm> createFilm(@Parameter(description = "Informações do filme") @RequestBody RequestFilm requestFilm){
         return ResponseEntity.status(HttpStatus.CREATED).body(filmsService.createFilm(requestFilm));
     }
 

@@ -1,5 +1,6 @@
 package com.filmflix.films.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,7 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Time;
+import java.time.LocalTime;
+
+
 
 @Entity
 @Data
@@ -19,5 +22,6 @@ public class Films {
     private String id;
     private String title;
     private String description;
-    private Time time;
+    private LocalTime time;
 }
+

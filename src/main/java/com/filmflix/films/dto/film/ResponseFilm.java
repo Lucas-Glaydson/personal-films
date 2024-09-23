@@ -1,6 +1,16 @@
 package com.filmflix.films.dto.film;
 
-import java.sql.Time;
+import io.swagger.v3.oas.annotations.media.Schema;
 
-public record ResponseFilm(String id, String title, String description, Time time) {
+import java.time.LocalTime;
+
+public record ResponseFilm(
+        String id,
+
+        String title,
+
+        String description,
+
+        @Schema(type = "string", pattern = "HH:mm:ss", example = "06:54:02")
+        LocalTime time) {
 }
