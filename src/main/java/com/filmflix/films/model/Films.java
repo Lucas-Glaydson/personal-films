@@ -8,8 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalTime;
-import java.util.UUID;
+import java.sql.Time;
 
 @Entity
 @Data
@@ -17,8 +16,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Films {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private String id;
     private String title;
     private String description;
-    private LocalTime time;
+    private Time time;
 }

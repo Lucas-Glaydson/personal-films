@@ -1,7 +1,6 @@
 package com.filmflix.films.dto.film;
 
-import java.time.LocalTime;
-import java.util.UUID;
+import java.sql.Time;
 
-public record ResponseFilm(UUID id, String title, String description, LocalTime time) {
+public record ResponseFilm(String id, String title, String description, Time time) {
 }
